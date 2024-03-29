@@ -4,13 +4,13 @@ conexao = mysql.connector.connect(
     host='localhost',
     user='root',
     password='123456',
-    database='bdyoutube',
+    database='openwork',
 )
 cursor = conexao.cursor()
 
 #/////////////////////////////////////   ESTUDO   /////////////////////////////////////////////////////////
-nome_produto = "todynho"
-comando = f'DELETE FROM vendas WHERE nome_produto = "{nome_produto}"'
+nome_usuario = "admin"
+comando = f'DELETE FROM vendas WHERE nome_produto = "{nome_usuario}"'
 cursor.execute(comando)
 conexao.commit() # edita o banco de dados
 
@@ -23,9 +23,9 @@ conexao.close()
 #////////////////////////////////////// CREATE  /////////////////////////////////////////////////////////
 #
 #
-#   nome_produto = "chocolate"
-#   valor = 15
-#   comando = f'INSERT INTO vendas (nome_produto, valor) VALUES ("{nome_produto}", {valor})'
+#   nome_usuario = "admin"
+#   senha = 123456
+#   comando = f'INSERT INTO vendas (nome_usuario, senha) VALUES ("{nome_usuario}", {senha})'
 #   cursor.execute(comando)
 #   conexao.commit() # edita o banco de dados
 #
@@ -36,7 +36,7 @@ conexao.close()
 # //////////////////////////////////// READ //////////////////////////////////////////////////////////
 #
 # 
-# comando = f'SELECT * FROM vendas'
+# comando = f'SELECT * FROM openwork.usuario'
 # cursor.execute(comando)
 # resultado = cursor.fetchall() # ler o banco de dados
 # print(resultado)
@@ -47,9 +47,9 @@ conexao.close()
 #//////////////////////////////////// UPDATE //////////////////////////////////////////////////////
 # 
 #
-# nome_produto = "todynho"
-# valor = 6
-# comando = f'UPDATE vendas SET valor = {valor} WHERE nome_produto = "{nome_produto}"'
+# nome_usuario = "admin"
+# valor = 123456
+# comando = f'UPDATE vendas SET senha = {valor} WHERE username = "{nome_usuario}"'
 # cursor.execute(comando)
 # conexao.commit() # edita o banco de dados
 #
@@ -59,8 +59,8 @@ conexao.close()
 
 #/////////////////////////////////////// DELETE /////////////////////////////////////////////
 # 
-#   nome_produto = "todynho"
-#   comando = f'DELETE FROM vendas WHERE nome_produto = "{nome_produto}"'
+#   nome_produto = "admin"
+#   comando = f'DELETE FROM username WHERE usuarios = "{nome_usuario}"'
 #   cursor.execute(comando)
 #   conexao.commit() # edita o banco de dados
 #
