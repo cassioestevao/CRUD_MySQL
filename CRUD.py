@@ -3,7 +3,7 @@ import mysql.connector
 conexao = mysql.connector.connect(
     host='localhost',
     user='root',
-    password='123456',
+    password='',
     database='openwork',
 )
 cursor = conexao.cursor()
